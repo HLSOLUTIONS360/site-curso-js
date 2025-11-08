@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Curso de JavaScript — HL Solutions 360</title>
+  <meta name="description" content="Curso prático de JavaScript da HL Solutions 360 com projeto final e módulo bônus de Git & GitHub." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0a0f1f; --card:#101b3a; --primary:#1e90ff; --accent:#00e0ff;
+      --text:#e6eefc; --muted:#a7b2c6; --shadow:0 10px 25px rgba(0,0,0,.35);
+      --radius:16px; --max:1100px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Poppins,sans-serif;background:radial-gradient(1000px 600px at 80% -10%, rgba(30,144,255,.18), transparent 60%) , var(--bg);color:var(--text)}
+    header{position:sticky;top:0;background:rgba(10,15,31,.8);backdrop-filter:blur(8px);z-index:10;border-bottom:1px solid rgba(255,255,255,.05)}
+    nav{max-width:var(--max);margin:auto;display:flex;justify-content:space-between;align-items:center;padding:12px 20px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700}
+    .brand-logo{width:36px;height:36px;border-radius:8px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary),var(--accent));font-weight:900;color:#001224}
+    nav a{text-decoration:none;color:var(--text);margin:0 10px;padding:6px 10px;border-radius:10px}
+    nav a:hover{background:rgba(255,255,255,.08)}
+    .btn{background:linear-gradient(135deg,var(--primary),var(--accent));color:#001224;font-weight:600;padding:10px 16px;border:none;border-radius:10px;cursor:pointer}
+    .hero{max-width:var(--max);margin:40px auto;padding:20px;display:grid;gap:30px}
+    .hero h1{font-size:clamp(28px,4vw,44px);margin-bottom:10px}
+    .hero p{color:var(--muted);margin-bottom:20px}
+    .badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+    .badge{border:1px solid rgba(124,196,255,.3);color:var(--accent);border-radius:20px;padding:6px 12px;font-size:13px}
+    section{max-width:var(--max);margin:50px auto;padding:0 20px}
+    .section-title{font-size:26px;margin-bottom:8px}
+    .section-sub{color:var(--muted);margin-bottom:22px}
+    .cards{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:16px}
+    .accordion{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);margin-bottom:10px;overflow:hidden}
+    .acc-head{width:100%;background:none;border:none;color:var(--text);padding:16px;font-size:16px;text-align:left;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
+    .acc-body{max-height:0;overflow:hidden;transition:max-height .35s ease;background:rgba(255,255,255,.03)}
+    .acc-body-inner{padding:16px;color:var(--muted)}
+    .chev{transition:transform .3s ease}
+    .timeline{display:grid;gap:14px}
+    .step{display:flex;gap:10px;align-items:flex-start}
+    .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);margin-top:8px}
+    footer{text-align:center;padding:20px;color:var(--muted);border-top:1px solid rgba(255,255,255,.05)}
+    .fab{position:fixed;right:20px;bottom:20px;z-index:20}
+    .fab-btn{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));color:#001224;font-size:24px;border:none;cursor:pointer;box-shadow:var(--shadow)}
+    .fab-menu{display:none;flex-direction:column;align-items:end;margin-bottom:10px}
+    .fab-menu a{text-decoration:none;color:var(--text);background:rgba(16,27,58,.9);border:1px solid rgba(124,196,255,.3);padding:8px 12px;border-radius:10px;margin-top:5px}
+    @media(max-width:900px){.cards{grid-template-columns:1fr 1fr}}
+    @media(max-width:620px){.cards{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<header>
+  <nav>
+    <div class="brand">
+      <div class="brand-logo">HL</div> HL Solutions 360 — Curso de JavaScript
+    </div>
+    <div>
+      <a href="#sobre">Sobre</a>
+      <a href="#grade">Grade</a>
+      <a href="#bonus">Bônus</a>
+      <a href="#contato" class="btn">Contato</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Aprenda JavaScript do Zero ao Avançado</h1>
+    <p>Trilha prática, exercícios guiados e um projeto final completo para o seu portfólio.</p>
+    <div class="badges">
+      <span class="badge">HTML5</span>
+      <span class="badge">CSS3</span>
+      <span class="badge">JS Moderno</span>
+      <span class="badge">DOM & Eventos</span>
+      <span class="badge">Projeto Final</span>
+      <span class="badge">Bônus: Git & GitHub</span>
+    </div>
+    <a href="#contato" class="btn">Quero Mais Informações</a>
+  </div>
+</section>
+
+<section id="sobre">
+  <h2 class="section-title">Sobre o Curso</h2>
+  <p class="section-sub">Formação direta ao ponto para quem deseja dominar JavaScript na prática, com aulas curtas, atividades mão-na-massa e acompanhamento do projeto final.</p>
+  <div class="cards">
+    <div class="card"><strong>Foco em prática</strong><br><span class="muted">Exemplos reais e desafios semanais.</span></div>
+    <div class="card"><strong>Metodologia progressiva</strong><br><span class="muted">Fundamentos → DOM → Lógica → Projeto.</span></div>
+    <div class="card"><strong>Carga horária estimada</strong><br><span class="muted">~40 horas, incluindo o módulo bônus.</span></div>
+  </div>
+</section>
+
+<section id="grade">
+  <h2 class="section-title">Grade do Curso</h2>
+  <p class="section-sub">Organização em módulos clara e objetiva:</p>
+
+  <!-- Módulo 1 -->
+  <div class="accordion">
+    <button class="acc-head">Módulo 1 — Fundamentos do JavaScript <span class="chev">▾</span></button>
+    <div class="acc-body"><div class="acc-body-inner">
+      <ul>
+        <li>Introdução e ambiente (VS Code, extensões úteis)</li>
+        <li>Variáveis (let, const), tipos e conversões</li>
+        <li>Operadores aritméticos, relacionais e lógicos</li>
+        <li>Strings, template literals e manipulações básicas</li>
+        <li>Boas práticas e organização</li>
+      </ul>
+    </div></div>
+  </div>
+
+  <!-- Módulo 2 -->
+  <div class="accordion">
+    <button class="acc-head">Módulo 2 — DOM & Eventos <span class="chev">▾</span></button>
+    <div class="acc-body"><div class="acc-body-inner">
+      <ul>
+        <li>Seletores, criação/alteração de elementos</li>
+        <li>Classes, estilos, acessibilidade básica</li>
+        <li>Eventos (click, input, submit, teclado)</li>
+        <li>Formulários e validação</li>
+        <li>Feedback visual e microinterações</li>
+      </ul>
+    </div></div>
+  </div>
+
+  <!-- Módulo 3 -->
+  <div class="accordion">
+    <button class="acc-head">Módulo 3 — Lógica, Funções e Estruturas <span class="chev">▾</span></button>
+    <div class="acc-body"><div class="acc-body-inner">
+      <ul>
+        <li>Condicionais (if/else, switch)</li>
+        <li>Laços (for, while, for...of)</li>
+        <li>Funções (declaração, arrow, parâmetros padrão)</li>
+        <li>Arrays (map, filter, reduce) e objetos</li>
+        <li>JSON e datas</li>
+      </ul>
+    </div></div>
+  </div>
+
+  <!-- Módulo 4 -->
+  <div class="accordion">
+    <button class="acc-head">Módulo 4 — Projeto Final <span class="chev">▾</span></button>
+    <div class="acc-body"><div class="acc-body-inner">
+      <ul>
+        <li>Briefing, protótipo e cronograma</li>
+        <li>Componentização simples com funções</li>
+        <li>LocalStorage e persistência de dados</li>
+        <li>Refino, testes e publicação</li>
+      </ul>
+    </div></div>
+  </div>
+</section>
+
+<!-- BÔNUS -->
+<section id="bonus">
+  <h2 class="section-title">Módulo Bônus — Git & GitHub</h2>
+  <p class="section-sub">Controle de versão na prática, do zero ao push do seu projeto.</p>
+
+  <div class="accordion">
+    <button class="acc-head">Instalação e Configuração Inicial <span class="chev">▾</span></button>
+    <div class="acc-body"><div class="acc-body-inner">
+      <ul>
+        <li>Instalar Git (Windows, macOS e Linux)</li>
+        <li>Configuração global: nome, e-mail e editor</li>
+        <li>Integrando com o VS Code</li>
+        <li>Chaves SSH e autenticação</li>
+      </ul>
+    </div></div>
+  </div>
+
+  <div class="accordion">
+    <button class="acc-head">Fluxo Básico de Trabalho <span class="chev">▾</span></button>
+    <div class="acc-body"><div class="acc-body-inner">
+      <ul>
+        <li><code>git init</code>, status, stage e commit</li>
+        <li>Conectar repositório remoto (<code>git remote</code>)</li>
+        <li><code>git push</code> e <code>git pull</code></li>
+        <li>.gitignore e README bem feito</li>
+      </ul>
+    </div></div>
+  </div>
+
+  <div class="accordion">
+    <button class="acc-head">Branches e Colaboração <span class="chev">▾</span></button>
+    <div class="acc-body"><div class="acc-body-inner">
+      <ul>
+        <li>Branches: criar, trocar, mesclar</li>
+        <li>Estratégia simples de ramificação</li>
+        <li>Pull Requests (visão geral) e revisão</li>
+        <li>Resolvendo conflitos básicos</li>
+      </ul>
+    </div></div>
+  </div>
+</section>
+
+<section id="cronograma">
+  <h2 class="section-title">Como funciona</h2>
+  <div class="timeline">
+    <div class="step"><div class="dot"></div><div><strong>Aulas curtas</strong> — conteúdo direto ao ponto, com prática.</div></div>
+    <div class="step"><div class="dot"></div><div><strong>Desafios</strong> — exercícios guiados para fixação.</div></div>
+    <div class="step"><div class="dot"></div><div><strong>Projeto</strong> — aplicação completa para portfólio.</div></div>
+    <div class="step"><div class="dot"></div><div><strong>Publicação</strong> — versionamento com Git & GitHub e deploy.</div></div>
+  </div>
+</section>
+
+<section id="contato">
+  <h2 class="section-title">Entre em Contato</h2>
+  <p class="section-sub">Fale comigo agora e receba o plano detalhado de aulas.</p>
+  <a href="https://wa.me/5518991724314?text=Ol%C3%A1!%20Tenho%20interesse%20no%20curso%20de%20JavaScript" class="btn">WhatsApp (18) 99172-4314</a>
+  <a href="https://wa.me/5515991940498?text=Ol%C3%A1!%20Tenho%20interesse%20no%20curso%20de%20JavaScript" class="btn">WhatsApp (15) 99194-0498</a>
+  <p style="margin-top:10px;">E-mail: <a href="mailto:hlsolutions360.br@gmail.com" style="color:var(--accent)">hlsolutions360.br@gmail.com</a></p>
+</section>
+
+<footer>© <span id="year"></span> HL Solutions 360 — Todos os direitos reservados.</footer>
+
+<!-- Botão flutuante -->
+<div class="fab">
+  <div class="fab-menu" id="fabMenu">
+    <a href="tel:+5518991724314">Ligar: (18) 99172-4314</a>
+    <a href="https://wa.me/5518991724314">WhatsApp (18)</a>
+    <a href="tel:+5515991940498">Ligar: (15) 99194-0498</a>
+    <a href="https://wa.me/5515991940498">WhatsApp (15)</a>
+    <a href="mailto:hlsolutions360.br@gmail.com">E-mail</a>
+  </div>
+  <button class="fab-btn" id="fab" aria-label="Contato">✆</button>
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Acordeões
+  document.querySelectorAll(".accordion").forEach(acc=>{
+    const head=acc.querySelector(".acc-head"),
+          body=acc.querySelector(".acc-body"),
+          chev=acc.querySelector(".chev");
+    head.onclick=()=>{
+      const open=body.style.maxHeight && body.style.maxHeight!=="0px";
+      document.querySelectorAll(".acc-body").forEach(b=>b.style.maxHeight=null);
+      document.querySelectorAll(".chev").forEach(c=>c.style.transform="rotate(0deg)");
+      if(!open){ body.style.maxHeight=body.scrollHeight+"px"; chev.style.transform="rotate(180deg)"; }
+    };
+  });
+
+  // FAB
+  const fab=document.getElementById("fab"), menu=document.getElementById("fabMenu");
+  fab.onclick=()=>{ menu.style.display=menu.style.display==="flex"?"none":"flex"; };
+</script>
+</body>
+</html>
